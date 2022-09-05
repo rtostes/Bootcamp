@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import usuarios from "../../fixtures/Usuarios.json"
 
 describe('US0001 - Funcionalidade: Login', () => {
 
@@ -17,6 +18,23 @@ describe('US0001 - Funcionalidade: Login', () => {
         cy.get('[data-test="alert"]').should('contain', 'Credenciais inválidas')
         
     })
+
+
+    it('Deve fazer login com sucesso - Usando importação', () => {
+        cy.login(usuarios[0].email,usuarios[0].senha)
+        cy.title().should('eq','ConexaoQA')
+        
+    }); 
+
+    it('Deve fazer login com sucesso - Usando fixture', () => {
+        cy.fixture("usuarios").then((user)=> {
+            cy.login(user[1].email, user[1].senha)
+        })
+        cy.title().should('eq','ConexaoQA')
+        
+    }); 
+
+
 
 
 });

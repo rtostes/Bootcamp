@@ -1,0 +1,16 @@
+[
+    {
+        "email": "rodrigo@teste.com",
+        "senha": "123456"
+    },
+
+    {
+        "email": "rodrigo@teste1.com",
+        "senha": "123456"
+    },
+    {
+        "email": "rodrigo@bootcamp.com",
+        "senha": "123456",
+        "perfil" : "admin"
+    }
+]
