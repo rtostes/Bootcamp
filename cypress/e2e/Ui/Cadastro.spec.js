@@ -8,7 +8,7 @@ describe('US002 - Funcionalidade: Cadastro', () => {
     });
 
 
-    it.only('Deve fazer o cadastro com sucesso', () => {
+    it('Deve fazer o cadastro com sucesso', () => {
         cy.get('[data-test="register-name"] > .MuiInputBase-root > .MuiInputBase-input').type(faker.name.firstName())
         cy.get('[data-test="register-email"] > .MuiInputBase-root > .MuiInputBase-input').type(faker.internet.email())
         cy.get('[data-test="register-password"] > .MuiInputBase-root > .MuiInputBase-input').type('123456')

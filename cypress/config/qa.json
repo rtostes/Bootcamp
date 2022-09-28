@@ -1,4 +1,4 @@
 {
-    "baseUrl": "https://...",
+    "baseUrl": "http://rightnow-sit.viavarejo.com.br:8084",
     "allure": "true"
 }
